@@ -1,0 +1,301 @@
+body, html { height: 100% }
+
+section { margin: 0 auto !important}
+
+main#welcome { height: 100%; overflow: hidden; }
+
+main#welcome div.jumbotron-image {
+    background-image: url("../media/background-jumbotron.jpg");
+
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    height: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 150%;
+
+    transform: scale(1.1);
+    
+    z-index: 1;
+}
+
+main#welcome header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    text-align: center;
+
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+
+    font-size: 3rem;
+}
+
+main#welcome button {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: rgba(255, 255, 255, 0.5);
+    background-color: transparent;
+    outline: 0;
+    border: 0;
+
+    font-size: 2rem;
+    cursor: pointer;
+
+    padding: 10px;
+}
+
+main#welcome button:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    transition: 0.25s;
+}
+
+#content nav {
+    position: fixed;
+    top: 0;
+}
+
+#content footer { background-color: #000 }
+
+/* navigation */
+#content nav, footer {
+    background-color:rgba(0, 0, 0, 0.3);
+    min-height: 50px;
+    max-height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#content nav a, footer a, footer address {
+    align-self: center;
+    color: white;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 12px;
+}
+
+footer address { 
+    font-weight: normal;
+    letter-spacing: 0;
+    color: #aaa;
+    cursor: default;
+}
+
+
+#content nav a:hover, footer a:hover {
+    text-decoration: underline;
+}
+
+/* Calendar */
+#events, #history, #join {
+    max-width: 1200px;
+    min-width: 500px;
+    margin: 20px;
+}
+
+#content h1 {
+    margin-top: 150px;
+    margin-bottom: 20px;
+    font-size: 5rem;
+    border-left: black solid 3px;
+}
+
+#events h1 {
+    background-image: url("../media/background-jumbotron.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 10px;
+    color: white;
+    border-left: #005e1f solid 5px;
+    z-index: 1;
+}
+
+#events ul { list-style-type: none }
+
+.month {
+    padding: 70px 25px;
+    width: 100%;
+    background: #005e1f;
+    text-align: center;
+}
+
+.month ul li {
+    color: white;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color: #ddd;
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: #666;
+    text-align: center;
+}
+
+.days {
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+}
+
+.days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 12px;
+    color: #777;
+}
+
+.days li .active {
+    padding: 5px;
+    background: #005e1f;
+    color: white !important;
+}
+
+/* History */
+#history h1 {
+    background-image: url("../media/background-jumbotron.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 10px;
+    color: white;
+    border-left: #005e1f solid 5px;
+    z-index: 2;
+}
+
+#history img {
+    width: 100%;
+    height: auto;
+}
+
+.founder-card {
+    width: 500px;
+    height: auto;
+    margin: 0 auto;
+}
+
+#history h4 {
+    font-size: 1.2rem;
+    padding: 4px;
+}
+
+#history p {
+    text-align: justify;
+    line-height: 1.25;
+    letter-spacing: 1px;
+}
+
+#pb-date {
+    color: black;
+    background-color:rgba(0, 0, 0, 0.3);
+    padding: 5px;
+}
+
+
+/* join */
+#join h1 {
+    background-image: url("../media/background-jumbotron.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 10px;
+    color: white;
+    border-left: #005e1f solid 5px;
+    z-index: 3;
+}
+
+form {
+    background-color: #eee;
+    border: solid 1px #666;
+    border-radius: 5px;
+    padding: 10px;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+hr {
+    width: auto;
+    border: solid #666 0.5px;
+    margin: 10px 0;
+}
+
+form label, form input, form button {
+    margin: 5px;
+}
+
+form input {
+    outline: 0;
+    border: 0;
+    padding: 4px;
+    font-family: "Ubuntu Condensed", sans-serif;
+}
+
+form button {
+    padding: 12px;
+    outline: 0;
+    border: 0;
+    color: white;
+    background-color: #005e1f;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+form button:hover {
+    font-weight: bold;
+}
+
+/*Queries*/
+
+@media only screen and (max-width: 990px) {
+    main#welcome header {
+        font-size: 2rem;
+    }
+
+    #content h1 {
+        font-size: 3rem;
+    }
+
+    .calendar, .founder-card {
+        width: 500px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    footer { display: none }
+
+    body {
+        margin: 5px;
+    }
+}
+
+@media only screen and (max-height: 560px) {
+    main#welcome button {
+        top: 90%;
+    }
+}
